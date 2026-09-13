@@ -36,6 +36,7 @@ Redis ("**RE**mote **DI**ctionary **S**erver") is an **in-memory data structure 
 - **Database** — a fast, key-value primary store, optionally persisted to disk.
 - **Message broker** — via Pub/Sub or Streams, for passing messages between services.
 - **Session store** — for web apps that need shared, fast session/state storage.
+- **Distributed lock** — using `SET key value NX PX <ttl>` (or the multi-node Redlock algorithm) to ensure only one process holds a resource at a time across a distributed system.
 
 Key properties:
 
