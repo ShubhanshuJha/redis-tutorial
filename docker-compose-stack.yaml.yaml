@@ -4,10 +4,10 @@ services:
     container_name: redis-stack
     restart: unless-stopped
     ports:
-      - "6379:6379"    # Redis server (same port your Python scripts already use)
+      - "6379:6379"    # Redis server (same port Python scripts already use)
       - "8001:8001"    # RedisInsight - open http://localhost:8001 in a browser
     environment:
-      - REDIS_ARGS=--appendonly yes    # Enable AOF persistence, same as your plain Redis setup
+      - REDIS_ARGS=--appendonly yes    # Enable AOF persistence, same as plain Redis setup
     volumes:
       - redis_stack_data:/data
     healthcheck:
